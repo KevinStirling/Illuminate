@@ -10,6 +10,7 @@ from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
 from tweepy import Stream
 import time
+import ColorLibrary
 
 consumer_key = 'AstAYAqNU3xi0UeXX0B744XwT'
 consumer_secret = 'vF94dDxrxL9YWPxfqCvSMUWZQVIKhTfdJOnRxO5vah7RQbk4SQ'
@@ -23,24 +24,6 @@ class listener(StreamListener):
     """ A listener handles tweets are the received from the stream.
     This is a basic listener that just prints received tweets to console.
     """
-	
-    def printRGBVal(self, color):
-		if color == 'yellow':
-			print "225,225,0"
-		elif color == 'red':
-			print "225,0,0"
-		elif color == 'lime':
-			print "0,225,0"
-		elif color == 'blue':
-			print "0,0,225"
-		elif color == 'green':
-			print "0,128,0"
-		elif color == 'purple':
-			print "128,0,128"
-		elif color == 'navy':
-			print "0,0,128"
-		else:
-			print 'test'
 			
     def on_data(self, data):
         try:
@@ -51,7 +34,14 @@ class listener(StreamListener):
 			
 			#prints tweet to console			
 			print tweetColor
-			self.printRGBVal(tweetColor)
+			instance = ColorLibrary.Colors()
+			RGBString = instance.returnRGBVal(tweetColor)
+			print RGBString
+			print instance.returnRed(RGBString)
+			print instance.returnGreen(RGBString)
+			print instance.returnBlue(RGBString)
+			print instance.returnGreen(RGBString) + instance.returnRed(RGBString) + instance.returnBlue(RGBString)
+			
 			#saves tweet and stores it in  a txt file :: is a separator, separates time and tweet.
 			#format time better
 			saveThis= str(time.time())+'::' + tweet 
