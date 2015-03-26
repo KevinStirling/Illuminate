@@ -1,5 +1,6 @@
 class Colors:
 	
+	
 	#we can add more colors here
 	def returnRGBVal(self, color):
 		if color == 'yellow':
@@ -17,7 +18,8 @@ class Colors:
 		elif color == 'navy':
 			return "0,0,128"
 		else:
-			return 'test'
+			return 'not a valid color'
+
 	
 	#process string
 	def returnRed(self,RGBVal):
