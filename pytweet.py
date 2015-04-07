@@ -37,10 +37,11 @@ class listener(StreamListener):
 			instance = ColorLibrary.Colors()
 			RGBString = instance.returnRGBVal(tweetColor)
 			print RGBString
-			print instance.returnRed(RGBString)
-			print instance.returnGreen(RGBString)
-			print instance.returnBlue(RGBString)
-			print instance.returnGreen(RGBString) + instance.returnRed(RGBString) + instance.returnBlue(RGBString)
+
+			red = instance.returnRed(RGBString)
+			green = instance.returnGreen(RGBString)
+			blue = instance.returnBlue(RGBString)
+			
 			
 			#saves tweet and stores it in  a txt file :: is a separator, separates time and tweet.
 			#format time better

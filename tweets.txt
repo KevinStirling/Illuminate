@@ -1,7 +1,0 @@
-1417639096.8::@MSUilluminate testinggff
-1424800840.8::@MSUilluminate pink
-1425404645.99::@MSUilluminate grass
-1425404717.48::@MSUilluminate green
-1425404717.48::@MSUilluminate green
-1425404831.87::@MSUilluminate blue
-1425404831.87::@MSUilluminate blue
