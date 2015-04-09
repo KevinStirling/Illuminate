@@ -63,7 +63,7 @@ class listener(StreamListener):
 			for i in range(30):
 				strip.setPixelColorRGB(i, red,green,blue)
 			strip.show()
-						
+			'''			
 			#saves tweet and stores it in  a txt file :: is a separator, separates time and tweet.
 			#format time better
 			saveThis= str(time.time())+'::' + tweet 
@@ -71,6 +71,7 @@ class listener(StreamListener):
 			saveFile.write(saveThis)
 			saveFile.write('\n')
 			saveFile.close()
+			'''
 			return True
 			
         except BaseException, e:
