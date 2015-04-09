@@ -5,6 +5,24 @@ class Colors:
 	def returnRGBVal(self, color):
 		if color == 'yellow':
 			return "225,225,0"
+		elif color == 'black':
+			return "0,0,0"
+		elif color == 'white':
+			return "255,255,255"
+		elif color == 'black':
+			return "0,0,0"
+		elif color == 'cyan':
+			return "0,255,255"
+		elif color == 'magenta':
+			return "255,0,255"
+		elif color == 'silver':
+			return "192,192,192"
+		elif color == 'gray':
+			return "128,128,128"
+		elif color == 'maroon':
+			return "128,0,0"
+		elif color == 'olive':
+			return "128,128,0"
 		elif color == 'red':
 			return "225,0,0"
 		elif color == 'lime':
@@ -17,22 +35,10 @@ class Colors:
 			return "139,69,19"
 		elif color == 'purple':
 			return "128,0,128"
+		elif color == 'teal':
+			return "0,128,128"
 		elif color == 'navy':
 			return "0,0,128"
-		elif color == 'indian red':
-			return "176,23,31"
-		elif color == 'crimson':
-			return "220,20,60"
-		elif color == 'lightpink':
-			return "255,182,193"
-		elif color == 'lightpink 1':
-			return "255,174,185"
-		elif color == 'lightpink 2':
-			return "238,162,173"
-		elif color == 'lightpink 3':
-			return "205,140,149"
-		elif color == 'lightpink 4':
-			return "139,95,101"
 		else:
 			return 'not a valid color'
 
