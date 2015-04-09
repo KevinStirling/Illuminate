@@ -1,11 +1,4 @@
-'''
-test python twitter api get input streaming for your tweets
-Should work as long as you have connection
-cd C:\Projects\pytweet\testenv
-.\Scripts\activate
-cd src
-python pytweet.py
-'''
+
 from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
 from tweepy import Stream
@@ -30,7 +23,7 @@ LED_PIN        = 18      # GPIO pin connected to the pixels (must support PWM!).
 LED_FREQ_HZ    = 800000  # LED signal frequency in hertz (usually 800khz)
 LED_DMA        = 5       # DMA channel to use for generating signal (try 5)
 LED_BRIGHTNESS = 255     # Set to 0 for darkest and 255 for brightest
-LED_INVERT     = True   # True to invert the signal (when using NPN transistor level shift)
+LED_INVERT     = False   # True to invert the signal (when using NPN transistor level shift)
 
 
 		
@@ -54,6 +47,10 @@ class listener(StreamListener):
 			RGBString = instance.returnRGBVal(tweetColor)
 			print RGBString
 
+			red = instance.returnRed(RGBString)
+			green = instance.returnGreen(RGBString)
+			blue = instance.returnBlue(RGBString)
+			
 			#pass these variables to light up variable
 			red = instance.returnRed(RGBString)
 			green =  instance.returnGreen(RGBString)
@@ -63,11 +60,10 @@ class listener(StreamListener):
 			strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS)
 			# Intialize the library (must be called once before other functions).
 			strip.begin()
-
-			strip.setPixelColor(LED_COUNT, Color(red,green,blue))
+			for i in range(30):
+				strip.setPixelColorRGB(i, red,green,blue)
 			strip.show()
-			time.sleep(wait_ms/1000.0)
-			
+			'''			
 			#saves tweet and stores it in  a txt file :: is a separator, separates time and tweet.
 			#format time better
 			saveThis= str(time.time())+'::' + tweet 
@@ -75,6 +71,7 @@ class listener(StreamListener):
 			saveFile.write(saveThis)
 			saveFile.write('\n')
 			saveFile.close()
+			'''
 			return True
 			
         except BaseException, e:
