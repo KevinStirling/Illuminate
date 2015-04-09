@@ -17,13 +17,7 @@ class Colors:
 			return "128,0,128"
 		elif color == 'navy':
 			return "0,0,128"
-		else:
-			return 'not a valid color'
-
-		
-
-	#Get colors from http://www.cloford.com/resources/colours/500col.htm
-		if color == 'indian red':
+		elif color == 'indian red':
 			return "176,23,31"
 		elif color == 'crimson':
 			return "220,20,60"
