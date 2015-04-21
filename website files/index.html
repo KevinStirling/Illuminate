@@ -1,0 +1,63 @@
+<html>
+<style>
+  body {
+    background-color: #c0392b;
+  }
+
+  img {
+      width: 75%;
+      margin-left: 15%;
+  }
+
+  h1 {
+    font-size: 32px;
+    color: #ecf0f1;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    text-align: center;
+  }
+
+  h2{
+    color:#c0392b;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    text-align: center;
+  }
+
+  p{
+    text-align: center;
+  }
+  #contentbody {
+    box-shadow: 1px 1px 25px #2c3e50;
+    width: 75%;
+    height: 400px;
+    margin-left: 15%;
+    margin-top: 5%;
+    border-radius: 25px;
+    background-color: #ecf0f1;
+  }
+  #lasttweet {
+    padding: 15px;
+  }
+  #about {
+    padding:15px;
+  }
+
+</style>
+  <body>
+    <img src="header.png">
+    <div id="contentbody">
+      <div id="lasttweet">
+        <h2>Activity Feed</h2>
+        <br>
+        /*TODO: create a script that will dynamically chage the content of this div, when a new tweet is recieved,
+        so that we dont have to refresh the page. Might need to use an external js library such as Grunt.js or something
+        */
+        <p>@kevinYENG changed the color to blue!</p>
+      </div>
+      <div id="about">
+        <h2>Want to participate?</h2>
+        <br>
+        <p>Tweet a color to @MSUIlluminate !</p>
+      </div>
+    </div>
+  </body>
+</html>
