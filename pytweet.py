@@ -18,7 +18,7 @@ access_token_secret = 'yuJ96C22YxU1Ks8cFv6oRSWcTOAiSFYzO6nzrZfI4U9eY'
 tweetColor=""
 
 # LED strip configuration:
-LED_COUNT      = 30      # Number of LED pixels.
+LED_COUNT      = 180     # Number of LED pixels.
 LED_PIN        = 18      # GPIO pin connected to the pixels (must support PWM!).
 LED_FREQ_HZ    = 800000  # LED signal frequency in hertz (usually 800khz)
 LED_DMA        = 5       # DMA channel to use for generating signal (try 5)
@@ -60,7 +60,7 @@ class listener(StreamListener):
 			strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS)
 			# Intialize the library (must be called once before other functions).
 			strip.begin()
-			for i in range(30):
+			for i in range(180):
 				strip.setPixelColorRGB(i, red,green,blue)
 			strip.show()
 			'''			
