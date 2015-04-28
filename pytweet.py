@@ -89,5 +89,5 @@ auth.set_access_token(access_token_key,access_token_secret)
 twitter_stream = Stream(auth,listener())
 
 #.filter user ID so we can get this users tweets. Google twitter ID to find user ID
-twitter_stream.filter(['2841969057'])
+twitter_stream.filter(['2775929615'])
 
